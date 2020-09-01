@@ -85,7 +85,7 @@ void ASZGJXCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInp
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	// Bind fire event
-	// PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ASZGJXCharacter::OnFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ASZGJXCharacter::OnFire);
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &ASZGJXCharacter::MoveForward);
